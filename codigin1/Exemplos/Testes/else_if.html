@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe seu salario
+    <input type="number" id="salario">
+    <Button onclick="Calcular()">Análisar Salário</Button>
+    <div id="mens"></div>
+</body>
+</html>
+
+<script>
+function Calcular(){
+    var salario = Number(salario.value)
+    if (salario < 1509){
+        mens.innerHTML = `Ta ganhando MUITO mal`
+    }
+
+     else{
+        if(salario <= 3000)
+        mens.innerHTML = `Ta ganhando mal`
+    
+
+            else{
+        if(salario <= 5000){
+            mens.innerHTML = `Da para viver`
+        }
+    }
+                 else{
+                     if(salario <= 10000){
+            mens.innerHTML= = `Da para comprar cafe e ajeite`
+        }
+     }
+                else{
+        mens.innerHTML = `Ta ganhando bem`
+    }
+
+
+     }
+}
+
+
+</script>

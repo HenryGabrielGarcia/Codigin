@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball</title>
+</head>
+<body>
+    
+    <h1> Se transforme em super sayajin!</h1>
+    <h4> Veja quanto seu guerreiro ficará forte se transformando em super sayajin!</h4>
+    
+    Informe o nome do guerreiro
+    <br>
+    <input type="text" id="v1" placeholder="abc">
+    <br>
+    Informe o KI normal do guerreiro
+    <br>
+    <input type="number" id="v2" placeholder="123">
+    <br>
+    <button onclick="poder()">Ver ki em cada forma</button>
+
+</body>
+</html>
+
+<script>
+
+    function poder(){
+
+        alert('O guerreiro ' + v1.value + ' se transformou-se em super sayajin e está com o ki de ' + v2.value * 50)
+        alert('O guerreiro ' + v1.value + ' se transformou-se em super sayajin 2 e está com o ki de ' + v2.value * 100)
+    }
+
+</script>

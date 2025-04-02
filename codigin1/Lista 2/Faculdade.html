@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculdade</title>
+</head>
+<body>
+   
+   <h1> Calcule a sua média da Sptech</h1>
+   <h4> Descubra sua média e veja se ira se tornar um super estagiário</h4>
+    Informe a nota que tirou na continuada
+    <br>
+    <input type="number" id="v1" placeholder="123">
+    <br>
+    Informe a nota que tirou na semestral
+    <br>
+    <input type="number" id="v2" placeholder="123">
+    <br>
+    Informe seu Nome
+    <br>
+    <input type="text" id="nome" placeholder="abc">
+    <br>
+    <button onclick="media()">Média</button>
+
+</body>
+</html>
+
+<script>
+
+    function media(){
+
+        alert('A média de ' +  nome.value + ' será de ' + (Number(v1.value * 0.4) + Number(v2.value * 0.6)))
+    }
+
+</script>

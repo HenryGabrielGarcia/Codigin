@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe um numero<br>
+    <input type="number" id="innumero">
+    <br>
+    <button onclick="analisar()">Analisar número</button>
+
+</body>
+</html>
+
+<script>
+
+function analisar(){
+var numero = Number(innumero.value)
+
+    if (numero < 42) {
+    alert("O número é menor que 42");
+}
+
+    if ( numero > 42) {
+        alert('O número é maior que 42')
+    }
+
+    if ( numero == 42) {
+        alert('o Número é igual a 42')
+    }
+
+}
+
+</script>

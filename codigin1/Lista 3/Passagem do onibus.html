@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Qual o  valor da passagem de onibus:
+    <br>
+    <input type="number" id="passe">
+    <br>
+    Informe a quantidade de viagens que fará por mês:
+    <br>
+    <input type="number" id="viagem">
+    <br>
+    Qual a distancia do trabalho até sua casa em KM:
+    <br>
+    <input type="number" id="dist">
+    <br>
+    <button onclick="trans()">Calcular VT</button>
+    <br>
+    <div id="mensa"></div>
+
+</body>
+</html>
+
+<script>
+
+function trans(){
+   var valor = passe.value * viagem.value * dist.value 
+    mensa.innerHTML = `   Você vai gastar R$ ${valor} por mês com transporte.  `
+
+    
+
+}
+
+
+</script>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Primeiro número:</h3>
+    <input id="input_n1" type="text">
+    <br><br>
+    
+    <h3>Segundo número:</h3>
+    <input id="input_n2" type="text">
+    <br><br>
+    
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="somar()">Somar</button>
+
+</body>
+</html>
+
+<script>
+    function multiplicar() {
+        alert('O resultado da multiplicação é: ' + input_n1.value * input_n2.value)
+    }
+
+    function dividir() {
+        alert('O resultado da divisão é: ' + input_n1.value / input_n2.value)
+    }
+
+    function subtrair() {
+        alert('O resultado da subtração é: ' + (input_n1.value - input_n2.value))
+    }
+
+    function somar() {
+        alert('O resultado da somar é: ' + (Number(input_n1.value) + Number(input_n2.value)))
+    }
+
+    /* 
+        Durante o cálculo, devemos tomar cuidado ao realizar operações aritméticas, levando em consideração a ordem de priorização: 
+        O conceito "P.E.M.D.A.S." (Parênteses, Expoentes, Multiplicação & Divisão, Adição & Subtração) indica a hierarquia de prioridades
+            - Parênteses possui a maior prioridade, enquanto Adição & Subtração são as menores prioridades.
+            - Devido a prioridade, quando utilizamos "*" e "+" na mesma expressão, a multiplicação sempre será calculada primeiro, por exemplo.
+            - Caso não haja nenhuma diferença de prioridade entre os operadores, a equação será calculada da esquerda para a direita, suscessivamente.      
+            - Em alguns casos, deve-se utilizar os parênteses para priorizar algum cálculo da equação, a fim de evitar resultados incorretos.
+            EX:    2 + 2 * 2 + 2     => 8
+                    2 + 2 * (2 + 2)   => 10
+                    (2 + 2) * (2 + 2)  => 16
+
+
+        Já para o cálculo da soma, temos um outro cenário: 
+        - Quando utilizamos o operador "+", ele possui 2 comportamentos padrão, dependendo de qual é o valor que está sendo utilizado na equação.
+        - Ao realizar uma soma de STRINGS (textos), o JavaScript entende que desejamos utilizar a técnica de "concatenação", onde realiza a junção de textos, COMO:
+            EX:   "Olá " + "pessoal"  => "Olá pessoal"    // valor TEXTUAL, com aspas
+                    "ABC" + 123         => "ABC123"         // valor TEXTUAL, com aspas
+
+        - Ao realizar uma soma de NÚMEROS, o JavaScript entende que estamos realizando uma SOMA: 
+            EX:   100 + 100  => 200   // valor NUMÉRICO, sem aspas
+                    150 + 200  => 350   // valor NUMÉRICO, sem aspas
+
+
+        Como funciona a conversão de texto para números: 
+        - No JavaScript, tudo que estiver entre "aspas", é considerado uma STRING, ou seja, será tratado como um valor de TEXTO.
+            Mesmo que sejam 'aspas simples', "aspas duplas" ou `crase`, todos são considerados valores textuais.
+        - Por padrão, o valor inserido nas inputs é tratado como texto.
+        - Portanto, para realizar uma SOMA, devemos converter os valores para NÚMEROS, para não ocorrer uma CONCATENAÇÃO de TEXTOS.
+            A função Number("X"): serve para converter o valor "X" em número, mas caso não consiga, retornará "NaN" (Not A Number);
+    */
+</script>

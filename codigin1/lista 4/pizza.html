@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe o valor da pizza
+    <input type="number" id="n1">
+    <br>
+    Quantidade de amigos
+    <input type="number" id="n2">
+    <br>
+    <button onclick="media()">Rola a pizza?</button>
+    <div id="mens"></div>
+</body>
+</html>
+
+<script>
+
+function media(){
+
+    var pedaco = Number(n1.value)
+    var amigos = Number(n2.value)
+    var pagamento = pedaco / amigos
+
+    if (pagamento <= 20){
+        mens.innerHTML = `Cada amigo vai pagar R$${pagamento} pela pizza`
+    }
+
+    if (pagamento > 20)
+        mens.innerHTML = `Cada amigo vai pagar R$${pagamento} pela pizza. Deu ruim! Pizza muito cara!`
+
+}
+
+</script>

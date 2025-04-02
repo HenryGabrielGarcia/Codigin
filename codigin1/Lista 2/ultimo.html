@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    <h1>Calculadora Funcional!</h1>
+    <h4> Calculadora feita no HTML!</h4>
+    Informe um valor
+    <br>
+    <input type="number" id="v1" placeholder="123">
+    <br>
+    Informe outro valor
+    <br>
+    <input type="number" id="v2" placeholder="123">
+    <br>
+    <button onclick="soma()">+</button>
+    <button onclick="menos()">-</button>
+    <button onclick="Multi()">*</button>
+    <button onclick="div()">/</button>
+
+</body>
+</html>
+
+<script>
+
+    function soma(){
+
+        alert(' A soma entre ' + v1.value +  ' e ' + v2.value + ' é ' + (Number (v1.value) + Number(v2.value)))
+    }
+
+    function menos(){
+
+        alert('A diferença entre ' + v1.value + ' e ' + v2.value + ' é ' + (v1.value - v2.value))
+    }
+
+    function Multi(){
+
+        alert('O produto entre ' + v1.value + ' e ' + v2.value + ' é ' + v1.value * v2.value)
+    }
+
+    function div(){
+
+        alert('A razão entre ' + v1.value + ' e ' + v2.value + ' é ' + v1.value / v2.value)
+    }
+
+</script>

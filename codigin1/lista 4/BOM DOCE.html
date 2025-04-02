@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Informe a quantidade de chocolates comprados:
+    <input type="number" id="n1">
+    <br>
+    <button onclick="analisar()">Compra</button>
+    <div id="mens"></div>
+
+</body>
+</html>
+
+<script>
+    
+    function analisar(){
+    var numero = Number(n1.value)
+    total = numero * 2.50
+
+    mens.innerHTML = `o valor da sua compra foi de ${total}`
+
+
+
+    }
+
+
+</script>

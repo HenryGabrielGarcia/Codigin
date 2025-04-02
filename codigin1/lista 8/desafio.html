@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Quantidade Produtos: <br>
+    <input type="number" id="input_qtdprod"></input><br><br>
+
+    Valor Total: <br>
+    <input type="number" id="input_vartotal"><br><br>
+
+    Cliente Vip? <br>
+    <select id="select_clienteVip">
+        <option>Sim</option>
+        <option>Não</option>
+    </select><br><br>
+
+    <button onclick="verificar()">Verificar</button>
+    
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+
+<script>
+        
+        
+    function verificar(){
+        var qtdProd = Number(input_qtdprod.value);
+        var valortotal = Number(input_vartotal.value);
+        var vip = select_clienteVip.value;
+        var desc = 0;
+        var recompensa=0;
+
+
+        if (qtdProd >5){
+            if (qtdProd >10 && valortotal >1000 && vip=="Sim") {
+                desc = desc + 15
+            }if ((qtdProd >10 && valortotal >500) || vip=="Sim"){
+                desc = desc + 10
+            }if (((qtdProd >=6 && qtdProd <=10) && valortotal >200) || vip=="Sim"){
+                desc = desc + 5
+            }
+        }
+
+        if (qtdProd >5){
+            if ((qtdProd >5 && valortotal >200) || vip=="Sim"){
+                recompensa = recompensa+50
+            }if (qtdProd >10 && valortotal >500){
+                recompensa = recompensa+100
+            } 
+        }  
+
+        div_mensagem.innerHTML = `O valor do desconto é ${desc}.<br>
+        O número de pontos de recompensa que você ganhou ${recompensa}.`
+        
+    }
+
+</script>

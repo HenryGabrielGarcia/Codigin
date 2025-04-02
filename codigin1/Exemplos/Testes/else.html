@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    digite um numero:
+    <input type="number" id="n1">
+    <br><br>
+    <button onclick="sla()">Clique</button>
+    <div id="mens"></div>
+</body>
+</html>
+
+<script>
+    function sla(){
+    var numero = Number(n1.value)
+    mens.innerHTML = ''
+    if (numero > 50){
+        mens.innerHTML = `O numero ${numero} é maior que 50`
+
+    }
+
+
+    else{
+        mens.innerHTML = `O numero ${numero} é menor ou igual que 50`
+    }
+
+
+    }
+</script>

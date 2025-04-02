@@ -1,0 +1,34 @@
+<!--
+
+1. Contagem Simples
+Crie um programa o qual:
+ 
+a) Ao clicar num botão "Contar"...   
+
+b) Exiba, debaixo do botão, os números de 1 a 15, um embaixo do outro.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="contar()">Contar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function contar(){
+        cont = 0;
+        var mensagem= "";
+        
+        while (cont < 15) {
+            cont++;
+            mensagem += `<br>Contagem atual: ${cont}`;
+        }
+        div_mensagem.innerHTML = mensagem
+    }
+</script>

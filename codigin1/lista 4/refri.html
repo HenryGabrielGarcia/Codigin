@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Quantas latinhas você toma no dia:
+    <br><br>
+    <input type="text" id="ref">
+    <br><br>
+    <button onclick="lata()">Quantos refris?</button>
+    <br><br>
+    <div id="mens"></div>
+</body>
+</html>
+
+<script>
+
+    function lata(){
+        var numero = Number(ref.value)
+        numero = numero * 365
+
+        if (numero < 500){
+        mens.innerHTML = `Você consome ${ numero} de refri por ano`
+        }
+        if (numero >= 500){
+            mens.innerHTML = `Você consome ${ numero} de refri por ano`
+            alert('Cuidado com a diabetes!')
+
+        }
+    
+    }
+</script>

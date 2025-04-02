@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Qual sua velocidade:
+    <br>
+    <input type="number" id="km">
+    <br>
+    Qual o limite da via:
+    <br>
+    <input type="number" id="via">
+    <br>
+    <button onclick="verificar()">Verificar</button>
+    <div id="mens"></div>
+</body>
+</html>
+
+<script>
+function verificar(){
+    var velocidade = Number(km.value);
+    var limite = Number(via.value);
+    limitemin = limite + (limite * 0.2)
+   
+    if(velocidade <= limite){
+        mens.innerHTML = `Velocidade dentro do limite. Boa direção!`
+    } else if(velocidade <= limitemin){
+        mens.innerHTML = `Atenção! Excedendo o limite permitido.`
+    } else{
+        mens.innerHTML = `Multa grave! Velocidade muito acima do permitido.`
+    }
+}
+</script>

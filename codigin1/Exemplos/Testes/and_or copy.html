@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    altura:
+    <input type="text" id="input_altura">
+    <br><br>
+    idade:
+    <input type="text" id="input_idade">
+    <br><br>
+    está acompanhado?
+    <select id="select_acompanhado">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    <br>
+    <button onclick="validar()">Validar Entrada</button>
+    <br>
+    <div id="mens"></div>
+
+</body>
+</html>
+
+<script>
+    function validar(){
+        var altura = Number(input_altura.value);
+        var idade = Number(input_idade.value)
+        var acompanhado = select_acompanhado.value;
+
+        if (altura >= 1.6 && (idade >= 18 || acompanhado == "SIM")) {
+                mens.innerHTML = "Você pode entrar no parque de diversões"
+            } else {
+                mens.innerHTML = "Você NÃO pode entrar no parque de diversões"
+            }
+        }
+</script>

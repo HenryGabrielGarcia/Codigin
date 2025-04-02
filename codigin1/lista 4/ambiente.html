@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="pa">Informe a temperatura do ambiente:</div>
+    <input type="number" id="n1">
+    <br>
+    <button onclick="verificar()">Verificar clima</button>
+    <div id="mens"></div>
+
+</body>
+</html>
+
+<script>
+
+    function verificar(){
+        var total = Number(n1.value);
+        if (total < 10) {
+            mens.innerHTML = `<img src="https://midias.gazetaonline.com.br/_midias/jpg/2018/06/21/1529584737395-5664331.jpg" alt="">`
+        } else {
+           mens.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrcKvZcWhOG-Cjchsr94qJtPL-JJhCoHjpyA&s" alt="">`
+
+
+    }
+}
+
+</script>

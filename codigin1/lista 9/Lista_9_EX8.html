@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe um numero:
+    <input type="number" id="id_numero">
+    <br>
+    Informe uma frase:
+    <input type="text" id="id_texto">
+    <button onclick="ver()">Papagaio</button>
+    
+</body>
+</html>
+
+<script>
+    function ver(){
+        var numero = Number(id_numero.value);
+        var texto = (id_texto.value);
+        var cont=0;
+        while (cont<numero) {
+            cont++
+            alert += (`/n ${texto}`) ;
+
+        }
+        
+    
+    }
+
+</script>

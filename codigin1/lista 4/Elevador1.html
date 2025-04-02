@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe a quantidade de homens:
+    <input type="number" id="n1">
+    <br>
+    Informe a quantidade de mulher:
+    <input type="number" id="n2">
+    <br>
+    <button onclick="analisar()">Ligar elevador</button>
+    <br>
+    <div id="mens"></div>
+
+
+</body>
+</html>
+
+<script>
+
+    function analisar(){
+    var homem = Number(n1.value*90);
+    var mulher = Number(n2.value*70);
+    total = homem + mulher
+    falta = total - 500
+
+    if (total <= 500) {
+    mens.innerHTML = `<b><p style="color: green;">Elevador vai se mover, pois está com ${total} kg</b>`        
+    } else {
+        mens.innerHTML = `<b><p style="color: red;">Alguém precisa descer. Precisa perder ${falta} kg para mover o elevador </b>`
+    }
+
+
+
+    }
+
+</script>

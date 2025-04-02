@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Frase: 
+    <input type="text" id="input_frase">
+    <button onclick="incrementar()">Incrementar Conteúdo</button>
+    <button onclick="sobrescrever()">Sobrescrever Conteúdo</button>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+
+    /*
+        Ao manipularmos o innerHTML de algum elemento HTML, estamos mexendo diretamente no conteúdo daquele elemento.
+        Por isso, precisamos sempre pensar em 2 possibilidades ao manipular esse conteúdo: 
+            - Podemos SOBRESCREVER todo o conteúdo da div, ao deixá-lo IGUAL a um novo valor.
+            - Podemos INCREMENTAR o conteúdo da div, apenas adicionando mais algum trecho dentro do seu conteúdo atual.
+
+        Exemplo de SOBRESCREVER o conteúdo da div: 
+
+            1. O elemento deve estar identificado com um id, para ser manipulado pelo script, como o "id_da_div" no exemplo abaixo.
+        
+                <div id="id_da_div"> ESTE É O CONTEÚDO ORIGINAL DA DIV </div>
+            
+            2. Para atualizar/sobrescrever o conteúdo atual da div através do JS, usamos: 
+            
+                id_da_div.innerHTML = "<h1>novo conteúdo</h1>";      // por ser HTML, interpretará a tag <h1> e aplicará o comportamento da tag
+            
+            3. Com esse comando acima, o conteúdo da div será apagado e sobrescrito para "<h1>novo conteúdo</h1>"
+            
+                <div id="id_da_div"> <h1>novo conteúdo</h1> </div>
+            
+                
+        Exemplo de INCREMENTAR o conteúdo da div: 
+            
+            1. O elemento deve estar identificado com um id, para ser manipulado pelo script, como o "id_da_div" no exemplo abaixo.
+                
+                <div id="id_da_div"> ESTE É O CONTEÚDO ORIGINAL DA DIV </div>
+
+            2. Para incrementar o conteúdo atual da div através do JS, usamos algum dos três comandos abaixo, que tem exatamente o mesmo comportamento: 
+                
+                id_da_div.innerHTML += "<h1>novo conteúdo</h1>";                          // por ser HTML, interpretará a tag <h1> e aplicará o comportamento da tag
+                id_da_div.innerHTML = id_da_div.innerHTML + "<h1>novo conteúdo</h1>";     // por ser HTML, interpretará a tag <h1> e aplicará o comportamento da tag
+                id_da_div.innerHTML = `${id_da_div.innerHTML} <h1>novo conteúdo</h1>`;    // por ser HTML, interpretará a tag <h1> e aplicará o comportamento da tag
+            
+            3. Com esse comando acima, o conteúdo da div será INCREMENTADO, preservando o conteúdo anterior e apenas adicionando um novo conteúdo, como:
+                
+                <div id="id_da_div"> ESTE É O CONTEÚDO ORIGINAL DA DIV <h1>novo conteúdo</h1> </div>
+    */
+
+    function incrementar() {
+        var frase = input_frase.value;
+        div_mensagem.innerHTML += `<br>${frase}`;                               // 1. utilizando atalho com '+=' para adicionar mais um trecho ao conteúdo da div, preservando o conteúdo anterior e adicionando a nova frase na linha de baixo
+        // div_mensagem.innerHTML = `${div_mensagem.innerHTML} <br> ${frase}`;  // 2. usando interpolação para preservar o conteúdo antigo da div e adicionar a nova frase na linha de baixo (funciona da mesma forma que o +=)
+        // div_mensagem.innerHTML = div_mensagem.innerHTML + '<br>'+ frase;     // 3. concatenando frase preservando o conteúdo antigo da div (similar ao contador global, que usa seu próprio valor) e adicionando a nova frase na linha de baixo
+    }
+    function sobrescrever() {
+        var frase = input_frase.value;
+        div_mensagem.innerHTML = frase; // utilizando = para tornar o conteúdo da div exatamente igual à frase, sobrescrevendo qualquer conteúdo anterior;
+        // div_mensagem.innerHTML = `Nova frase: ${frase}`; 
+    }
+
+</script>

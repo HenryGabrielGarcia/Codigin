@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe seu login:
+    <input type="text" id="input_login">
+    <br><br>
+    Informe sua senha:
+    <input type="text" id="input_senha">
+    <br><br>
+    Informe sua informação pessoal:
+    <input type="text" id="input_pessoal">
+    <br><br>
+    <button onclick="Autenticar()">Autenticar</button>
+    <div id="mens"></div>
+
+</body>
+</html>
+
+<script>
+    var contador = 3;
+    function Autenticar(){
+        var login = input_login.value
+        var senha = input_senha.value
+        var informação = input_pessoal.value
+        if(contador > 3){
+        if (login == "ana" && senha == "braga" && (informação == "1949" || informação == "louro josé")) {
+                mens.innerHTML = "Usuário autenticado";
+            } else {
+                contador = contador - 1
+                mens.innerHTML = "Falha na autenticação";
+            } }else{
+                mens.innerHTML= "bloqueio"
+            }
+        };
+    
+</script>

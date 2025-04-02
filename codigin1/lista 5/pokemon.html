@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+Informe um pokemon:
+<br>
+<input type="text" id="poke">
+<br>
+<button onclick="analisar()">Escolher Pokémon</button>
+<div id="mens"></div>
+
+</body>
+</html>
+<script>
+    function analisar(){
+        var pokemon = poke.value
+        if(pokemon == "Bulbasaur"){
+            mens.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGymturVMHVRc-9kAhaYpju2MmPGm1eI_qw&s">`
+        }else if(pokemon == "Charmander"){
+            mens.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-YIori22TTHL1f22umsr6tEAFwHjvsst50A&s">`
+        }else if(pokemon == "Squirtle"){
+            mens.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgAlO-0TXNrQxBnt8-7NLUTolCfpvXhQFvqw&s">`
+        }else{
+            mens.innerHTML = `Pokémon não reconhecido.`
+        }
+    }   
+
+</script>

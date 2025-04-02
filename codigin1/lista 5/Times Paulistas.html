@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe seu time:
+    <br>
+    <input type="text" id="povo" placeholder="São Paulo, Palmeiras, Corinthians, Santos">
+    <br>
+    <button onclick="analisar()">Fale sobre esse time</button>
+    <div id="Corinthians" style="background-color: black; color: white;"></div>
+    <div id="SãoPaulo" style="background-color: black; color: red;"></div>
+    <div id="Palmeiras" style="background-color: green; color: white;"></div>
+    <div id="Santos" style="background-color: white; color: black;"></div>
+
+
+</body>
+</html>
+
+<script>
+    function analisar(){
+        
+                Corinthians.innerHTML = ` `
+                 Santos.innerHTML = ` `
+                 Palmeiras.innerHTML = ` `
+                 SãoPaulo.innerHTML = ` `
+        var time = povo.value
+        if(time == "Corinthians"){
+            Corinthians.innerHTML = `Salve o Corinthians`
+        } else if(time == "Santos"){
+            Santos.innerHTML = `Agora quem dá a bola é o Santos`
+        } else if(time == "Palmeiras"){
+            Palmeiras.innerHTML = `Salve o alviverde imponente`
+        } else if(time == "São Paulo"){
+            SãoPaulo.innerHTML = `Salve o Tricolor paulista`
+        }
+    }
+</script>

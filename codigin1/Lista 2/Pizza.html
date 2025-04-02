@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+</head>
+<body>
+    
+    <h1>Calculadora de divisão de pizza!</h1>
+    <h4>Quer dividir a pizza e não sabe como? Esse site te ajudará!</h4>
+    Informe o valor da pizza
+    <br>
+    <input type="number" id="v1" placeholder="123">
+    <br>
+    Informe a quantidade de amigos
+    <br>
+    <input type="number" id="v2" placeholder="123">
+    <br>
+    <button onclick="pizza()">#lovePizza</button>   
+
+</body>
+</html>
+
+<script>
+
+    function pizza(){
+        alert('Cada um dos ' + v2.value + ' amigos vai pagar ' + v1.value / v2.value)
+    }
+
+</script>

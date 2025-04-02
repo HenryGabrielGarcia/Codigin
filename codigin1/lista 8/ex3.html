@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Simulador de Preço do Bilhete Único de São Paulo 
+
+    Informe tipo de passagem
+    <select id="input_passageiro">
+        <option> Comum </option>
+        <option> Estudante </option>
+        <option> Idoso/PNE </option><br><br>
+
+    </select><br><br>
+
+    Informe tipo de passagem
+    <select id="input_passagem">
+        <option> Passagem única </option>
+        <option> Passagem integração </option><br><br>
+
+    </select><br><br>
+
+    <button onclick="simule()"> Simule Preço </button><br>
+
+   <br> <div id="mensagem"></div>
+
+
+</body>
+</html>
+
+<script>
+function simule(){
+var passageiro= input_passageiro.value
+var passagem= input_passagem.value
+var valorunica= 4.40
+var valorintegraçao= 5.90
+
+
+if(passageiro == 'Estudante' && passagem == 'Passagem única'){
+   mensagem.innerHTML=  `Valor da passagem escolhida: R$${valorunica * 0.5} `
+}
+
+else if(passageiro == 'Estudante' && passagem == 'Passagem integração'){
+    mensagem.innerHTML= `Valor da passagem escolhida: R$${valorintegraçao * 0.5} `
+}
+
+else if(passageiro == 'Idoso/PNE' && (passagem == 'Passagem integração' || passagem == 'Passagem única')){
+    mensagem.innerHTML= `Valor da passagem escolhida: R$${0} `
+}
+
+else if(passageiro == 'Comum' && passagem == 'Passagem única'){
+        mensagem.innerHTML=`Valor da passagem escolhida: R$${valorunica}`
+    }
+
+else{
+        mensagem.innerHTML=`Valor da passagem escolhida: R$${valorintegraçao}`
+    }
+
+}
+
+
+
+
+
+</script>

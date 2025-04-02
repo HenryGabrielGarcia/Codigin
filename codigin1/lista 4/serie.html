@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe a ultima série que assistiu:
+    <input type="text" id="v1">
+    <br>
+    Informe o total de episódios que você assistiu:
+    <input type="number" id="v2">
+    <br>
+    <button onclick="verificar()">Verificar nível</button>
+    <div id="mens"></div>
+    <dis id="men"></dis>
+
+</body>
+</html>
+
+<script>
+    function verificar(){
+        mens.innerHTML = ''
+        men.innerHTML = ''
+
+    var serie = Number(v2.value)
+    total = (serie * 22) / 60
+
+    if (total > 30 ) {
+        mens.innerHTML = `Vejo que você gosta da série ${v1.value}
+        `
+        men.innerHTML = `Uau, você realmente gosta dessa série!`
+    } else {
+        mens.innerHTML = `Vejo que você gosta da série ${v1.value}
+        `
+        
+    }
+    
+
+
+
+    }
+
+
+
+
+</script>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Qual seu humor hoje:
+    <br>
+    <input type="text" id="lhumor">
+    <br>
+    <button onclick="mostrar()">Mostrar Humor</button>
+    <div id="mens"></div>
+</body>
+</html>
+
+<script>
+    function mostrar(){
+        var humor = lhumor.value
+        if(humor == "Feliz"){
+            mens.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdz8E2PfJJLnlL_X-ZqMmsNJUaHBD9eMvXyw&s">`
+        } else if(humor == "Triste"){
+            mens.innerHTML = `<img src="https://img.freepik.com/vetores-premium/emoticon-triste_1303870-82.jpg?semt=ais_hybrid">`
+        } else if(humor == "Bravo"){
+            mens.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMdyxNVXgCqPgPrWdzueWxn49gH3Q66AtFow&s">`
+        } else if(humor == "Surpreso"){
+            mens.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3xk6Mh9SaZlRM5bQDD2bfARIHdkIq8lr-Sw&s">`
+        }else if(humor == 'Cansado'){
+            mens.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE_JVkdqphXfDfpgS7-2gJyBD0hB_MrqIkvw&s">`
+        }
+
+    }
+</script>

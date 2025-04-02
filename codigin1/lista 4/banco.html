@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe o valor da renda familiar:
+    <input type="number" id="renda">
+    <br>
+    Informe o valor da prestação:
+    <input type="number" id="prest">
+    <br>
+    <button onclick="financiamento()">Verificar financiamento</button>
+    <div id="mens">A prestação corresponde a XX% da renda familiar</div>
+    <div id="men"></div>
+
+</body>
+</html>
+
+<script>
+
+    function financiamento(){
+
+        var renda1 = Number(renda.value)
+        var prestação = Number(prest.value)
+        var total = (prestação / renda1) * 100
+
+        if ( total > 30){
+            mens.innerHTML = `A prestação corresponde a ${total}% da renda familiar`
+            men.innerHTML = `<b><p style="color: red;">Será necessário complementar a renda familiar</b>`
+        }
+    }
+
+</script>

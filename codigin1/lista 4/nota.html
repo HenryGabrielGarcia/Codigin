@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe a primeira nota:
+    <input type="number" id="v1">
+    <br>
+    Informe a segunda nota 2:
+    <input type="number" id="v2">
+    <br>
+    <button onclick="analisar()">Verificar situação</button>
+
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var nota1 = Number(v1.value)
+        var nota2 = Number(v2.value)
+        notas = (nota1 + nota2) / 2
+
+        if (notas >= 6) {
+            alert('Parabéns, aprovado!')
+        } else {
+            alert('Tente outra vez...')
+        }
+
+    }
+
+
+
+</script>

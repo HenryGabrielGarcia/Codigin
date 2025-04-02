@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite uma temperatura
+    <input type="number" id="temp">
+    <button onclick="analisar()">Analiar temperatura</button>
+    <div id="Mensagem"></div>
+</body>
+</html>
+
+<script>
+function analisar(){
+    var temperatura = Number(temp.value);
+    /*
+    abaixo de 15 'Muito frio'
+    entre 15 e 24 'agradavel'
+    acima de 24  'Muito Quente'
+    */
+
+    if (temperatura < 15) {
+        Mensagem.innerHTML = 'Temperatura: Muito Frio'
+    } else if (temperatura <= 24){
+        Mensagem.innerHTML= 'Temperatura: Agradavel'
+    }
+        else{
+            Mensagem.innerHTML= 'Temperatura: Muito Quente'
+        }
+    }
+
+
+
+
+</script>

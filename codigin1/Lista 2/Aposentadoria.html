@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aposentadoria</title>
+</head>
+<body>
+    
+    <H1> Calculadora de aposentadoria!</H1>
+    <h4>Descubra quando pode se aposentar</h4>
+    
+    Insira sua idade
+    <br>
+    <input type="number" id="v1" placeholder="123">
+    <br><br>
+    <button onclick="homem()">Aposentadoria Homem</button> <button onclick="mulher()">Aposentadoria Mulher</button>
+    
+
+
+</body>
+</html>
+
+<script>
+
+function homem(){
+    alert('Falta ' +  (70 - v1.value) + ' anos para se aposentar.')
+
+}
+
+function mulher(){
+
+    alert('Falta ' + (60 - v1.value) + ' anos para se aposentar.')
+}
+
+</script>

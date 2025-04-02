@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe o tamanho da tela do celular:
+    <input type="number" id="input_tamanho">
+    <br><br>
+    Cor do celular:
+    <select id="select_cor">
+        <option>Preto</option>
+        <option>Prata</option>
+        <option>Azul</option>
+        <option>Vermelho</option>
+    </select>
+    <br><br>
+    <button onclick="avaliar()">Será que ele gosta?</button>
+    <div id="mens"></div>
+
+</body>
+</html>
+
+<script>
+    function avaliar(){
+        var tela = Number(input_tamanho.value);
+        var cor = select_cor.value;
+
+        if (tela >= 6.5 && (cor == "Preto" || cor == "Prata")) {
+            mens.innerHTML = `<img src="https://st3.depositphotos.com/2024219/31793/i/450/depositphotos_317939792-stock-photo-young-woman-isolated-yellow-background.jpg">`
+        } else {
+            mens.innerHTML = `<img src="https://st2.depositphotos.com/2024219/9512/i/450/depositphotos_95128178-stock-photo-man-over-isolated-white-background.jpg">`
+        }
+    }
+</script>

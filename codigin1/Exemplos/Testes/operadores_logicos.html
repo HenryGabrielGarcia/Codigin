@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe sua temperatua:
+    <input type="number" id="input_temp">
+    <button onclick="analisar()">Analisar</button>
+    <div id="mens"></div>
+</body>
+</html>
+
+<script>
+function analisar(){
+    var temperatura = Number(input_temp.value);
+
+    if (temperatura >= 15 || temperatura <= 25) {
+        mens.innerHTML = 'temperatura confortavel'
+    } else {
+        mens.innerHTML = 'temperatura desconfortavel'
+    }
+}
+
+</script>

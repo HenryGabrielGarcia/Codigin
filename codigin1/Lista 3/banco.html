@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Informe o valor a ser depositado ou retirado
+    <input type="number" id="v1">
+    <br><br>
+    <button onclick="colocar()"> Depositar</button>
+    <button onclick="tirar()">Retirar</button> 
+    <br><br>
+    
+
+</body>
+</html>
+
+<script>
+    var saldo = 0
+
+    function tirar(){
+
+
+        saldo = saldo - v1.value
+        alert('Retirada de R$ ' + v1.value + 'efetuada! Saldo atual: R$ ' + saldo)
+    }
+
+    function colocar(){
+
+        saldo = saldo + Number(v1.value)
+        alert(' Depósito de R$' + v1.value + 'efetuado! Saldo atual: R$ ' + saldo)
+    }
+
+
+
+</script>

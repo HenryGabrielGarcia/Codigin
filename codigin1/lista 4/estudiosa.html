@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe a primeira nota:
+    
+    <input type="number" id="n1">
+    <br><br>
+    Informe a segunda nota:
+    
+    <input type="number" id="n2">
+    <br><br>
+    Informe a terceira nota:
+    
+    <input type="number" id="n3">
+    <br><br>
+    <button onclick="estudo()">Analisar desempenho</button>
+    <div id="mens"></div>
+</body>
+</html>
+<script>
+
+function estudo(){
+    var nota1 = Number(n1.value)
+    var nota2 = Number(n2.value)
+    var nota3 = Number(n3.value) 
+    numero = (nota1 + nota2 + nota3) / 3
+
+    if (numero <= 9.4){
+        mens.innerHTML = `Sua média foi de ${numero}.  
+        `
+    }
+    
+    if (numero > 9.4 ){
+        mens.innerHTML = `Sua média foi de ${numero}. 
+        Parabéns, você é fora de série!`
+    }
+
+}
+
+</script>

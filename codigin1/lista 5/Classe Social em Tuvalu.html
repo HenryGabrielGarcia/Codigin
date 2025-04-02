@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe sua renda familiar:
+    <br>
+    <input type="Number" id="renda">
+    <br>
+    <button onclick="analisar()">Analisar Renda</button>
+    <div id="mens"></div>
+</body>
+</html>
+
+<script>
+    function analisar(){    
+    
+    var Renda = Number(renda.value);
+    if(Renda <= 250){
+        mens.innerHTML = `Classe E`
+    } else if(Renda <= 900){
+        mens.innerHTML = `Classe D`
+    } else if (Renda <= 2500){
+        mens.innerHTML = `Classe C`
+    } else if (Renda <= 9500){
+        mens.innerHTML = `Classe B`
+    } else if (Renda > 9500){
+        mens.innerHTML = `Classe A`
+    }
+}
+</script>
