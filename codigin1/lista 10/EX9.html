@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe um numero para que seja o inicio:
+    <input type="number" id="id_numero1">
+    <br>
+    Informe um numero para que seja o fim:
+    <input type="number" id="id_numero2">
+    <br>
+    <button onclick="ver()">S2 Pares</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function ver(){
+
+        var numero1 = Number(id_numero1.value);
+        var numero2 = Number(id_numero2.value);
+        var mensagem = "";
+
+        for (;numero1<=numero2; numero1++) {
+            mensagem += `<br> ${numero1}`;
+        }
+        div_mensagem.innerHTML = mensagem;
+    }
+</script>

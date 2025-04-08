@@ -1,0 +1,33 @@
+Insira um número: <br>
+    <input type="number" id="input_numero"> <br><br>
+
+    Insira uma frase: <br>
+    <input type="text" id="input_frase"> <br><br>
+
+    <button onclick="exibir()">Papagaio</button> <br><br>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    
+    function exibir(){
+        var numero = Number(input_numero.value);
+        var msg = input_frase.value;
+        var contador = 0; 
+        var contadorFrase = 0;
+        var mensagem = "";
+        
+
+        while (contadorFrase < numero){
+            mensagem += msg + "\n"
+            contadorFrase++;
+        }
+        
+        while (contador < numero){ 
+            alert (mensagem );
+            contador++;    
+        }
+    }
+</script>

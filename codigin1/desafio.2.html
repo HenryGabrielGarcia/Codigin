@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
-    Informe a qtd de Macarons: 
+
+    Informe a qtd de Macarons:
     <input type="number" id="input_macarons">
     <br>
     e seu preço:
     <input type="number" id="input_preco_macarons">
     <br><br>
-    Informe a qtd de Brigadeiros: 
+    Informe a qtd de Brigadeiros:
     <input type="number" id="input_brigadeiro">
     <br>
     e seu preço:
@@ -30,5 +32,97 @@
     <br>
     e seu preço:
     <input type="number" id="input_preco_cheesecakes">
+    <br>
+    <button onclick="verificar()">Verificar Vendas</button>
+    <br>
+    <div id="div_mensagem"></div>
 </body>
+
 </html>
+<script>
+function verificar(){
+
+    var Venda = 1; 
+    var contador = 0;   
+
+    var mensagem1 = "";
+    var mensagem2 = "";
+    var mensagem3 = "";
+    var mensagem4 = "";
+
+    var total = 0; 
+
+    var qtdMacarons= Number(input_macarons.value);    
+    var qtdBrigadeiros= Number(input_brigadeiro.value);    
+    var qtdCupcakes= Number(input_cupcakes.value);    
+    var qtdCheesecakes= Number(input_cheesecakes.value);    
+
+    var imgMacarons = `<img src="https://static.itdg.com.br/images/1200-630/06edb6a571a067e7c6029dbde006d1b5/275301-original.jpg" style="width: 100px; height: 100px;">`;
+    var imgBrigadeiro = `<img src="https://i0.wp.com/www.flamboesa.com.br/wp-content/uploads/2015/02/DSC00951.jpg" style="width: 100px; height: 100px;">`;
+    var imgCupcakes = `<img src="https://static.itdg.com.br/images/640-440/7534f5bcee2488b51810b7b7d9239eee/89546-original.jpg" style="width: 100px; height: 100px;">`;
+    var imgCheesecakes = `<img src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/8fafc3935c766bf8c9f1331a325e48a9.jpg" style="width: 100px; height: 100px;">`;
+
+    var precoMacarons= Number(input_preco_macarons.value); 
+    var precoBrigadeiro= Number(input_preco_brigadeiro.value);    
+    var precoCupcakes= Number(input_preco_cupcakes.value);    
+    var precoCheesecakes= Number(input_preco_cheesecakes.value);    
+    
+    
+    if (qtdMacarons>=0 && qtdBrigadeiros>=0 && qtdCupcakes>=0 && qtdCheesecakes>=0) {
+
+        
+        while (contador < qtdMacarons) {
+            total += precoMacarons;
+            mensagem1 +=`<br>Venda ${Venda} - ${imgMacarons}- ${precoMacarons}`;
+            contador++;
+            Venda++;
+        }
+
+        contador = 0; 
+
+        
+        while (contador < qtdBrigadeiros) {
+            total += precoBrigadeiro;               
+            mensagem2 +=`<br>Venda ${Venda} - ${imgBrigadeiro}- ${precoBrigadeiro}`;
+            contador++;
+            Venda++;
+        }
+
+        contador = 0; 
+
+        
+        while (contador < qtdCupcakes) {
+            total += precoCupcakes;
+            mensagem3 +=`<br>Venda ${Venda} - ${imgCupcakes}- ${precoCupcakes}`;
+            contador++;
+            Venda++;
+        } 
+
+        contador = 0; 
+
+      
+        while (contador < qtdCheesecakes) {
+            total += precoCheesecakes;
+            mensagem4 +=`<br>Venda ${Venda} - ${imgCheesecakes}- ${precoCheesecakes}`;
+            contador++;
+            Venda++;
+        }             
+         
+         div_mensagem.innerHTML = `
+         ${mensagem1}<br>
+         ${mensagem2}<br>
+         ${mensagem3}<br>
+         ${mensagem4}<br>
+         <br>
+         Com a quantidade de ${qtdMacarons} Macarons, ${qtdBrigadeiros}  Brigadeiros, ${qtdCupcakes} Cupcakes e ${qtdCheesecakes} Cheesecakes, a venda totalizará R$${total.toFixed(2)}
+         `;
+        
+
+    } else {
+        alert("Erro, valor negativo")
+    }
+
+
+
+}
+</script>   

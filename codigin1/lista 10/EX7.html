@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe um numero entre 0 e 200:
+    <input type="number" id="id_numero">
+    <button onclick="ver()">Viva o 7</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function ver(){
+        var numero = Number(id_numero.value);
+        
+        var mensagem= "";
+        
+        if (numero >= 0 && numero <= 200) {
+            for ( var cont = 7; cont<=numero; cont += 7) {
+                
+                mensagem += `<br>${cont}`;
+                
+            } 
+        } else {
+            alert("Numero invalido!!")
+        }
+        div_mensagem.innerHTML = mensagem
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe o começo do intervalo:
+    <input type="number" id="input_comec">
+    <br>
+    Informe o final do intervalo:
+    <input type="number" id="input_final">
+    <br>
+    <button onclick="curtir()">Curto 3 e 5!</button>
+    <div id="mens"></div>
+
+</body>
+</html>
+
+<script>
+
+    function curtir() {
+        var começo = Number(input_comec);
+        var final = Number(input_final);
+        var contador = 0;
+        var mensagem = '';
+
+        while (começo < final) {
+            mensagem += `${contador}`
+            contador++
+        }
+
+    }
+
+</script>

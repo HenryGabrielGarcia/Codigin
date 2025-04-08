@@ -6,18 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="ver()">Diga algo sobre a matéria de Algoritmos</button>
+    <button onclick="contar()">Contar</button>
     <div id="div_mensagem"></div>
 </body>
 </html>
 
 <script>
-    function ver(){
+    function contar(){
+        cont = 0;
         var mensagem= "";
-        var cont = 0;
-        while (cont<7) {
-            mensagem += "<br>Amo algoritmo";
-            cont++;
+        
+        for (cont = 1; cont <= 15; cont++) {
+            mensagem += `<br>Contagem atual: ${cont}`;
         }
         div_mensagem.innerHTML = mensagem
     }
