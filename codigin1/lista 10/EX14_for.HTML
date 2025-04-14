@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="input_dias">De quantos em quantos dias o você faz musculação:</label>
+    <input type="number" id="input_dias">
+    <button onclick="exibir()">Exibir rotina mensal</button>
+    <div id="mensa"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function exibir() {
+        var dias = Number(input_dias.value);
+        var mensagem = '';
+        var controle = 1;
+
+
+        for (var contador = 1; contador <= 30; contador++) {
+            if (contador == controle) {
+                mensagem += `${contador} - Musculação <br>`
+                controle += (dias)
+            }
+            else if (contador < dias) {
+                mensagem += `${contador} - Musculação <br>`
+            }
+
+            mensa.innerHTML = mensagem
+        }
+    }
+</script>

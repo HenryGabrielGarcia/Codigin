@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Frase:
+    <input oninput="analisar()" type="text" id="input_frase">
+
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+    function analisar(){
+        var frase = input_frase.value;
+        var tamanhoFrase = frase.length;
+
+        div_mensagem.innerHTML = `Tamanho da frase: ${tamanhoFrase} <br>
+        Primeiro caractere: ${frase[0]} <br>
+        Segundo caractere: ${frase[2]} <br>
+        Ultimo caractere: ${frase[tamanhoFrase - 1]} <br>
+        Frase MAIÚSCULA: ${frase.toUpperCase()} <br>
+        Frase minúscula: ${frase.toLowerCase()} <br>
+        Frase termina com letra/palavra especifica: ${frase.endsWith('.com')} <br>
+        Frase Começa com Alguma letra/palavra especifica: ${frase.startsWith('m')} <br>
+        Frase inclui '@': ${frase.includes('@')} <br>
+        Frase inclui caractere especial: ${frase.includes('@' || '!' || '#' || '%' || '¨' || '&' || '*')} <br>
+        Frase com "4" no primeiro "A": ${frase.replace('A','4')} <br>
+        Frase com "4" no primeiro "A": ${frase.replaceAll('E','3')} <br>
+        Frase sem espaõ e ponto: ${frase.replaceAll('.', '').replaceAll('','')}`
+    }
+</script>
