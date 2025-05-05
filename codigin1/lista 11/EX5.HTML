@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe seu email:
+    <input type="text" id="input_email">
+    <br>
+    Informe sua senha:
+    <input type="text" id="input_senha">
+    <br>
+    <button onclick="validar()">Validar</button>
+    
+
+</body>
+</html>
+
+<script>
+
+    function validar(){
+        var email = input_email.value;
+        var senha = input_senha.value;
+
+       if (email == '@SPTech.com.br') {
+        alert('Valores inválidos')
+       }else{
+        if (email.endsWith('@SPTech.com.br') && senha > senha[3] ) {
+            alert('Cadastro válido')
+        } else {
+            alert('Valores inválidos')
+        }
+       }
+    }
+
+</script>

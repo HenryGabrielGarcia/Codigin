@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Informe seu nome:
+    <input oninput="analisar()" maxlength="10" type="text" id="input_nome">
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+
+function analisar(){
+    var nome = input_nome.value;
+    var nome10 = nome[9]
+
+
+    if (nome = nome10) {
+        div_mensagem.innerHTML = 'Nome OK'
+    } else {
+        div_mensagem.innerHTML = 'Nome deve ter pelo menos 10 letras'
+    }
+}
+
+</script>
